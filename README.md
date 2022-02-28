@@ -1,4 +1,4 @@
-# Instaclone App
+# Instaclone app
 
 Here is the mobile app of the Instagram clone.
 
