@@ -2,6 +2,10 @@
 
 Here is the mobile app of the Instagram clone.
 
+You can use the following link to test the mobile application:
+
+[https://appetize.io/app/jp33k73ba2560v8v84h197vw5m?device=pixel6&osVersion=12.0&scale=75](https://appetize.io/app/jp33k73ba2560v8v84h197vw5m?device=pixel6&osVersion=12.0&scale=75)
+
 ## Stack
 
 - React Native
