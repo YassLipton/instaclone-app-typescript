@@ -1,20 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import {DarkTheme, DefaultTheme} from '@react-navigation/native'
+import {createStackNavigator} from '@react-navigation/stack'
+import { Appearance, AppearanceProvider, useColorScheme } from 'react-native-appearance'
+import MainStack from './src/stack/MainStack'
+import AuthProvider from './src/common/AuthProvider'
+import ThemeProvider from './src/common/ThemeProvider'
+import { LogBox } from 'react-native';
 
-export default function App() {
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <AppearanceProvider>
+      <ThemeProvider>
+        <AuthProvider>
+          <MainStack />
+        </AuthProvider>
+      </ThemeProvider>
+    </AppearanceProvider>
+  )
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+LogBox.ignoreLogs([
+  "[react-native-gesture-handler] Seems like you\'re using an old API with gesture components, check out new Gestures system!",
+])
+
+export default App
