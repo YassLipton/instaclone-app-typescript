@@ -2,7 +2,7 @@
 
 Here is the mobile app of the Instagram clone.
 
-## stack
+## Stack
 
 - React Native
 - TypeScript
